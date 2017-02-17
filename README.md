@@ -6,4 +6,4 @@ According to yelp Docs they have their days start from Mon to Sun as (0 to 6)
 while on the new Date().getDay() function starts from Sun to Mon as (0 to 6).
 
 
-<h6>This is a simple successfull attempt to parse the data which I had to deal while developing a mobile application with Ionic.</h6>
+<h6>This is a simple successfull attempt to parse the data which I had to deal while developing a mobile application via Ionic.</h6>
