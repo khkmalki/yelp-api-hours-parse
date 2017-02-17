@@ -2,7 +2,7 @@ body{
   background:lightsalmon;
 }
 .brk{
-  <!--   you can change the width according to the environment -->
+  /*   you can change the width according to the environment web, mobile */
   overflow-y: auto !important;
     height: 39px;
     white-space: pre-wrap !important;
