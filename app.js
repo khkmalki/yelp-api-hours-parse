@@ -2,8 +2,7 @@ var app = angular.module('Myapp', [])
 
 app.filter('convTime', ['$filter', function($filter) {
   return function(time) {
-
-  
+ 
     var rightime;
     var strtime = time.toString();
     var firstTwo = strtime.substring(0, 2);
