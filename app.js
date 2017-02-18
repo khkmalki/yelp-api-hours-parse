@@ -2,12 +2,10 @@ var app = angular.module('Myapp', [])
 
 app.filter('convTime', ['$filter', function($filter) {
   return function(time) {
- 
     var rightime;
     var strtime = time.toString();
     var firstTwo = strtime.substring(0, 2);
     var rightmint = strtime.substring(2, 4);
-
     if (parseInt(firstTwo) == 00) {
       return rightime = 12 + ":" + rightmint.toString() + ' AM';
     } else if (parseInt(firstTwo) == 12) {
@@ -20,20 +18,13 @@ app.filter('convTime', ['$filter', function($filter) {
 }]);
 app.filter('handelHr', ['$filter', 'convTimeFilter', function($filter, convTimeFilter) {
   return function(times) {
-    
     var itemPos = 0; // position of element in the array.
-    
     // Yelp api days are 0:6 Monday to Sunday;
     var today = new Date().getDay();
-   // today = today.toString();
-    (today == 0) ? today = 6: today -= 1;
-    
-    console.log(today);
+    (today == 0) ? today = 6: today -= 1
     /*  ////////////////////////////////
-
 I know the code is a little bit messy
 I am busy with a project once I finish I'll try to make it more professional. /:)
-
 ////////////////////////////////////
     */
     var firsTime, secondTime;
@@ -46,9 +37,7 @@ I am busy with a project once I finish I'll try to make it more professional. /:
         itemPos +=1;
         break;
       }
-
     };
-
     if (times[itemPos] !== undefined && times[itemPos].day == today) {
       secondTime = convTimeFilter(times[itemPos]['start']) + ", " + convTimeFilter(times[itemPos]['end']);
       return firsTime + " " + secondTime;
